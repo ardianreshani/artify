@@ -14,7 +14,6 @@ const Nav = () => {
         </li>
         <li>
           <Link to="/work">02 Our Work</Link>
-          <a href="#"></a>
         </li>
         <li>
           <Link to="/contact">03 Contact Us</Link>
