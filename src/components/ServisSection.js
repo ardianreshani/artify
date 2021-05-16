@@ -15,31 +15,31 @@ const ServisSection = () => {
         </h2>
         <Cards>
           <Card>
-            <div className="icon">
+            <Icone>
               <img src={clock} alt="clock icon" />
               <h3>Efficient</h3>
-            </div>
+            </Icone>
             <p>Lorem ipsum dolor sit amet.</p>
           </Card>
           <Card>
-            <div className="icon">
+            <Icone>
               <img src={teamwork} alt="teamwork icon" />
               <h3>Teamwork</h3>
-            </div>
+            </Icone>
             <p>Lorem ipsum dolor sit amet.</p>
           </Card>
           <Card>
-            <div className="icon">
+            <Icone>
               <img src={diaphragm} alt="diaphragm icon" />
               <h3>Diaphragm</h3>
-            </div>
+            </Icone>
             <p>Lorem ipsum dolor sit amet.</p>
           </Card>
           <Card>
-            <div className="icon">
+            <Icone>
               <img src={money} alt="money icon" />
               <h3>Affordable</h3>
-            </div>
+            </Icone>
             <p>Lorem ipsum dolor sit amet.</p>
           </Card>
         </Cards>
@@ -64,17 +64,16 @@ const Cards = styled.div`
   flex-wrap: wrap;
 `;
 const Card = styled.div`
-  flex-basis: 20rem;
-  .icon {
-    display: flex;
-    align-items: center;
-  }
   h3 {
     margin-left: 1rem;
     background: white;
     color: black;
+    border-radius: 8px;
     padding: 1rem;
   }
+`;
+const Icone = styled.div`
+  display: flex;
 `;
 
 export default ServisSection;
