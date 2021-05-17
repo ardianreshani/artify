@@ -1,33 +1,36 @@
 import React from "react";
 import home1 from "../img/home1.png";
 import { About, Descripten, Hide, Image } from "../styles";
-import styled from "styled-components";
+import { motion } from "framer-motion";
+import { titleAnim, fade, photoAnim } from "../animation";
+import Wave from "./Wave";
 const AboutSection = () => {
   return (
     <About>
       <Descripten>
-        <div className="title">
+        <motion.div className="title">
           <Hide>
-            <h2>We work to make</h2>
+            <motion.h2 variants={titleAnim}>We work to make</motion.h2>
           </Hide>
           <Hide>
-            <h2>
+            <motion.h2 variants={titleAnim}>
               your <span>dreams</span> come
-            </h2>
+            </motion.h2>
           </Hide>
           <Hide>
-            <h2>true</h2>
+            <motion.h2 variants={titleAnim}>true</motion.h2>
           </Hide>
-        </div>
+        </motion.div>
 
-        <p>
+        <motion.p variants={fade}>
           Contact us for any photography or videography ideas that you have.
-        </p>
-        <button>Contact Us</button>
+        </motion.p>
+        <motion.button variants={fade}>Contact Us</motion.button>
       </Descripten>
       <Image>
-        <img src={home1} alt="guy" />
+        <motion.img variants={photoAnim} src={home1} alt="guy" />
       </Image>
+      <Wave />
     </About>
   );
 };
