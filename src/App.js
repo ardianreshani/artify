@@ -6,12 +6,14 @@ import OureWork from "./pages/OureWork";
 import ContactUs from "./pages/ContactUs";
 import MovieDetail from "./pages/MovieDetail";
 import { AnimatePresence } from "framer-motion";
+
 function App() {
   const location = useLocation();
   return (
     <div className="App">
       <GlobalStyle />
       <Nav />
+
       <AnimatePresence exitBeforeEnter>
         <Switch location={location} key={location.pathname}>
           <Route path="/" exact>

@@ -6,8 +6,15 @@ const GlobalStyle = createGlobalStyle`
         padding: 0;
         box-sizing: border-box;
     }
+
+     html{
+         @media (max-width: 1700px){
+             font-size: 80%;
+         }
+     }
     body{
         background-color: #1b1b1b;
+        overflow-x: hidden;
     }
     button{
         font-weight: bold;

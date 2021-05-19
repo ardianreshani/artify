@@ -5,9 +5,17 @@ import teamwork from "../img/teamwork.svg";
 import home2 from "../img/home2.png";
 import { About, Descripten, Image } from "../styles";
 import styled from "styled-components";
+import { useScroll } from "./useScroll";
+import { scrollReveal } from "../animation";
 const ServisSection = () => {
+  const [element, controls] = useScroll();
   return (
-    <Services>
+    <Services
+      variants={scrollReveal}
+      animate={controls}
+      initial="hidden"
+      ref={element}
+    >
       <Descripten>
         <h2>
           {" "}
@@ -62,8 +70,12 @@ const Services = styled(About)`
 const Cards = styled.div`
   display: flex;
   flex-wrap: wrap;
+  @media (max-width: 1200px) {
+    justify-content: center;
+  }
 `;
 const Card = styled.div`
+  flex-basis: 20rem;
   h3 {
     margin-left: 1rem;
     background: white;
