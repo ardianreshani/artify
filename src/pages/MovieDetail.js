@@ -13,6 +13,7 @@ const MovieDetail = () => {
   useEffect(() => {
     const currentMovie = movies.filter((stateMovie) => stateMovie.url === url);
     setMovie(currentMovie[0]);
+    console.log(setMovies);
   }, [movies, url]);
   return (
     <motion.div
